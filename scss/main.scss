@@ -582,14 +582,24 @@ b, strong {
 }
 
 /* Slick */
+.slick-dots {
+	bottom: -40px;
+}
 .slick-dots li button:before {
 	color: #fff;
 	opacity: .6;
 	font-size: 8px;
+	content: '';
+	width: 8px;
+	height: 8px;
+	background: none;
+	border: 1px solid #fff;
+	border-radius: 100%;
 }
 
 .slick-dots li.slick-active button:before {
 	color: #fff;
+	background: #fff;
 	opacity: 1;
 }
 

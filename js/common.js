@@ -63,12 +63,6 @@ $(function () {
 
         if ( this.realIndex == 4 ) {
           $('.menu').addClass('is-black');
-          var typed = new Typed('.typed', {
-            strings: ["Контакты", "Расскажите нам о своей цели и оставьте контактные данные", "Делаем сильных сильнее", "Напишите нам", "Оставьте заявку и мы свяжемся с вами"],
-            typeSpeed: 50,
-            backSpeed: 50,
-            smartBackspace: true
-          });
         } else if (this.realIndex == 0) {
           $('.menu').removeClass('is-about').addClass('is-head');
         } else if (this.realIndex == 1) {
