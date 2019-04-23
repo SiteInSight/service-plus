@@ -1,0 +1,173 @@
+@import "vars";
+
+
+/*==========  Desktop First  ==========*/
+
+@media (max-width: 1600px) {
+  .menu.is-head .menu--nav a {
+    font-size: 12px;
+  }
+  .heading-1 {
+    font-size: 44px;
+  }
+  .heading-2 {
+    font-size: 34px;
+  }
+}
+
+// ≥1200px
+@include media-breakpoint-down(lg) {
+  body {
+    font-size: 13px;
+  }
+  .subtitle--md {
+    font-size: 13px;
+  }
+  .text--14 {
+    font-size: 10px;
+  }
+  .pic-50 svg {
+    height: 40px;
+  }
+	.menu--nav {
+    display: none;
+  }
+}
+
+// ≥992px
+@include media-breakpoint-down(md) {
+  .text--16 {
+    font-size: 14px;
+  }
+  .menu--copyright .text--16 {
+    font-size: 12px;
+  }
+  .menu--madeby .link {
+    font-size: 12px;
+  }
+  .menu--bottom , .menu--top {
+    padding: 0 20px;
+  }
+  .section {
+    padding: 0 20px;
+  }
+  .heading-1 {
+    font-size: 30px;
+  }
+}
+
+// ≥768px
+@include media-breakpoint-down(sm) {
+  .about {
+    background: url(../img/about-bg.jpg);
+    color: #fff;
+  }
+  .head {
+    background: url(../img/nasa-bg.jpg);
+    color: #fff;
+  }
+  .pic-50 {
+    width: 100%;
+  }
+  .form-group {
+    margin: 2rem 0;
+  }
+  .modal--inner {
+    display: flex;
+    align-items: center;
+  }
+  .modal--content {
+    padding: 10%;
+  }
+}
+
+// ≥576px
+@include media-breakpoint-down(xs) {
+  .menu--madeby .link {
+    font-size: 10px;
+  }
+  .menu--numbers .link {
+    font-size: 10px;
+  }
+  .subtitle--lg {
+    font-size: 14px;
+  }
+  .subtitle--md {
+    font-size: 10px;
+  }
+  .heading-2 {
+    font-size: 24px;
+  }
+  .menu.is-head {
+    .menu--madeby {
+      a {
+        color: #fff;
+      }
+    }
+    .menu--nav {
+      a {
+        color: #fff;
+        &::after {
+          background: #fff;
+        }
+      }
+    }
+    .menu--logo__white {
+      opacity: 1;
+    }
+    .menu--logo__black {
+      opacity: 0;
+    }
+  }
+  .pic-black svg {
+    fill: #fff;
+  }
+  .pic-50 {
+    width: 100%;
+  }
+  .menu.is-about {
+    .menu--numbers{
+      a {
+        color: #fff;
+        &::before {
+          background: #fff;
+        }
+      }
+    }
+    .menu--copyright {
+      color: #000;
+      .text--white {
+        color: #fff;
+      }
+      a {
+        color: #fff;
+        &::before {
+          background: #fff;
+        }
+      }
+    }
+  }
+}
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
+@include media-breakpoint-up(sm) {
+
+}
+
+// ≤768px
+@include media-breakpoint-up(md) {
+
+}
+
+// ≤992px
+@include media-breakpoint-up(lg) {
+
+}
+
+// ≤1200px
+@include media-breakpoint-up(xl) {
+	
+}
