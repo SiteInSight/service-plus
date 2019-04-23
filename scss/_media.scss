@@ -103,6 +103,9 @@
   .modal--content {
     padding: 10%;
   }
+  .pic-50 svg {
+    fill: #fff;
+  }
 }
 
 // ≥576px
@@ -139,7 +142,7 @@
     font-size: 14px;
   }
   .subtitle--md {
-    font-size: 10px;
+    font-size: 12px;
   }
   .heading-2 {
     font-size: 18px;
