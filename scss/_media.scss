@@ -126,6 +126,13 @@
     background: url(../img/nasa-bg.jpg);
     color: #fff;
   }
+  .electro {
+    background: url(../img/nasa-bg.jpg);
+    color: #fff;
+    .pic-50 svg {
+      fill: #fff;
+    }
+  }
   .pic-50 {
     width: 100%;
   }
@@ -141,6 +148,49 @@
   }
   .pic-50 svg {
     fill: #fff;
+  }
+  .menu.is-head {
+    .menu--madeby {
+      a {
+        color: #fff;
+      }
+    }
+    .menu--nav {
+      a {
+        color: #fff;
+        &::after {
+          background: #fff;
+        }
+      }
+    }
+    .menu--logo__white {
+      opacity: 1;
+    }
+    .menu--logo__black {
+      opacity: 0;
+    }
+  }
+  .menu.is-about {
+    .menu--numbers{
+      a {
+        color: #fff;
+        &::before {
+          background: #fff;
+        }
+      }
+    }
+    .menu--copyright {
+      color: #000;
+      .text--white {
+        color: #fff;
+      }
+      a {
+        color: #fff;
+        &::before {
+          background: #fff;
+        }
+      }
+    }
   }
 }
 
@@ -238,6 +288,24 @@
         }
       }
     }
+  }
+  .subtitle--lg , .subtitle--md {
+    font-size: 12px;
+  }
+  .text--14 {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 321px) {
+  .subtitle--lg , .subtitle--md {
+    font-size: 10px;
+  }
+  .heading-1 {
+    font-size: 24px;
+  }
+  .pic-50 {
+    display: none;
   }
 }
 

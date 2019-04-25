@@ -63,7 +63,7 @@ $(function () {
 
         if ( this.realIndex == 4 ) {
           $('.menu').addClass('is-black');
-        } else if (this.realIndex == 0) {
+        } else if (this.realIndex == 0 || this.realIndex == 2) {
           $('.menu').removeClass('is-about').addClass('is-head');
         } else if (this.realIndex == 1) {
           $('.menu').removeClass('is-head').addClass('is-about');

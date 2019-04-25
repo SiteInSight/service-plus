@@ -211,10 +211,6 @@ b, strong {
 	display: inline;
 }
 
-.typed-cursor {
-
-}
-
 /* Page skroll */
 
 .onepage-pagination li a:before {
@@ -559,10 +555,13 @@ b, strong {
 
 /* Electro */
 .electro {
-	background-image: url('../img/nasa-bg.jpg');
+	background-image: linear-gradient(to right, #fff 50%, rgba(0,0,0,.01) 50%), url('../img/nasa-bg.jpg');
 	display: flex;
 	align-items: center;
-	color: #fff;
+	color: #000;
+	.pic-50 svg {
+		fill: #000;
+	}
 }
 
 
