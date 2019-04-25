@@ -123,8 +123,15 @@
     color: #fff;
   }
   .head {
-    background: url(../img/nasa-bg.jpg);
+    background: url(../img/header-bg.jpg);
     color: #fff;
+  }
+  .truck {
+    background: url(../img/tech-bg.jpg);
+    color: #fff;
+    .pic-50 svg {
+      fill: #fff;
+    }
   }
   .electro {
     background: url(../img/nasa-bg.jpg);
@@ -132,6 +139,9 @@
     .pic-50 svg {
       fill: #fff;
     }
+  }
+  .menu--numbers a {
+    font-size: 16px;
   }
   .pic-50 {
     width: 100%;
@@ -148,6 +158,18 @@
   }
   .pic-50 svg {
     fill: #fff;
+  }
+  .section .container-fluid {
+    padding: 15px;
+    background: rgba(0,0,0,.5);
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .row {
+      width: 100%;
+    }
   }
   .menu.is-head {
     .menu--madeby {

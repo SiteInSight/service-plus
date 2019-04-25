@@ -244,6 +244,10 @@ b, strong {
 	z-index: 1;
 }
 
+.section .container-fluid {
+	padding: 0 !important;
+}
+
 /* Modal */
 
 .modal--block {
@@ -420,6 +424,9 @@ b, strong {
 .section {
 	height: 100vh;
 	padding: 0 65px;
+	.row {
+		margin: 0;
+	}
 }
 
 /* Menu */
@@ -428,10 +435,11 @@ b, strong {
 .menu--top {
 	z-index: 10;
 	position: fixed;
-	width: 100%;
+	width: 100vw;
 	box-sizing: border-box;
 	padding: 0 80px;
 	top: 20px;
+	left: 0;
 }
 
 .menu--logo {
@@ -547,8 +555,9 @@ b, strong {
 /* Head */
 
 .head {
-	background: linear-gradient(to right, #fff 50%, rgba(0,0,0,.01) 50%), url("../img/nasa-bg.jpg");
+	background: linear-gradient(to right, #fff 50%, rgba(0,0,0,.01) 50%), url("../img/header-bg.jpg");
 	display: flex;
+	background-position: 200% 0, 400px 0;
 	align-items: center;
 	color: #000;
 }
@@ -557,6 +566,7 @@ b, strong {
 .electro {
 	background-image: linear-gradient(to right, #fff 50%, rgba(0,0,0,.01) 50%), url('../img/nasa-bg.jpg');
 	display: flex;
+	background-position: 200% 0, 200% 0;
 	align-items: center;
 	color: #000;
 	.pic-50 svg {
@@ -567,15 +577,21 @@ b, strong {
 
 /* tech */
 .truck {
-	background-image: url('../img/tech-bg.jpg');
+	background-image: linear-gradient(to right, #fff 50%, rgba(0,0,0,.01) 50%), url('../img/tech-bg.jpg');
 	display: flex;
+	background-position: 0 0, 500px 0;
+	background-size: cover, cover;
 	align-items: center;
-	color: #fff;
+	color: #000;
+	.pic-50 svg {
+		fill: #000;
+	}
 }
 
 .about {
-	background: linear-gradient(to right, rgba(0,0,0,.01) 48%, #fff 48%), url("../img/about-bg.jpg");
+	background: linear-gradient(to right, rgba(0,0,0,.01) 50%, #fff 50%), url("../img/about-bg.jpg");
 	display: flex;
+	background-position: 200% 0, 200% 0;
 	align-items: center;
 	color: #000;
 }
@@ -584,6 +600,18 @@ b, strong {
 .slick-dots {
 	bottom: -40px;
 }
+
+.truck .slick-dots li button:before {
+	color: #000;
+	border: 1px solid #000;
+}
+
+.truck .slick-dots li.slick-active button:before {
+	color: #000;
+	background: #000;
+	opacity: 1;
+}
+
 .slick-dots li button:before {
 	color: #fff;
 	opacity: .6;

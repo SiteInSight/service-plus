@@ -63,7 +63,7 @@ $(function () {
 
         if ( this.realIndex == 4 ) {
           $('.menu').addClass('is-black');
-        } else if (this.realIndex == 0 || this.realIndex == 2) {
+        } else if (this.realIndex == 0 || this.realIndex == 2 || this.realIndex == 3) {
           $('.menu').removeClass('is-about').addClass('is-head');
         } else if (this.realIndex == 1) {
           $('.menu').removeClass('is-head').addClass('is-about');
@@ -124,9 +124,26 @@ $(function () {
   if ( $(document).width() < 768 ) {
     $('.m-slider').slick({
       arrows: false,
-      dots: true
+      dots: true,
+      slidesToShow: 2,
+      slidesToScroll: 2
     })
   }
+
+  $('.tr-slider').slick({
+    arrows: false,
+    dots: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2
+        }
+      }
+    ]
+  })
 
 
 });
