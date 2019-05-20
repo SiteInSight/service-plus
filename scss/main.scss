@@ -40,6 +40,11 @@ body {
 	}
 }
 
+.img-bg {
+	width: auto;
+	height: 100%;
+}
+
 .text-center {
 	text-align: center;
 }
@@ -244,10 +249,6 @@ b, strong {
 	z-index: 1;
 }
 
-.section .container-fluid {
-	padding: 0 !important;
-}
-
 /* Modal */
 
 .modal--block {
@@ -417,26 +418,26 @@ b, strong {
 	}
 }
 
-.page {
-	background: #000;
-}
 
 .section {
 	height: 100vh;
 	padding: 0 65px;
+	position: relative;
 	.row {
 		margin: 0;
 	}
 }
 
 /* Menu */
-
+.menu {
+	width: 100vw;
+	position: absolute;
+}
 
 .menu--top {
 	z-index: 10;
 	position: fixed;
 	width: 100vw;
-	box-sizing: border-box;
 	padding: 0 80px;
 	top: 20px;
 	left: 0;
@@ -492,20 +493,6 @@ b, strong {
 	}
 }
 
-.menu.is-black {
-	.text--white {
-		color: #000 !important;
-	}
-	.link {
-		color: #000;
-	}
-	.menu--logo__white {
-		opacity: 0;
-	}
-	.menu--logo__black {
-		opacity: 1;
-	}
-}
 
 .menu.is-head {
 	.menu--madeby {
@@ -529,11 +516,19 @@ b, strong {
 	}
 }
 
-.menu.is-about {
+.menu.is-black {
 	.menu--numbers{
 		a {
 			color: #000;
 			&::before {
+				background: #000;
+			}
+		}
+	}
+	.menu--nav {
+		a {
+			color: #000;
+			&::after {
 				background: #000;
 			}
 		}
@@ -550,23 +545,38 @@ b, strong {
 			}
 		}
 	}
+	.menu--madeby {
+		a {
+			color: #000;
+		}
+	}
+	.menu--logo__white {
+		opacity: 0;
+	}
+	.menu--logo__black {
+		opacity: 1;
+	}
 }
 
 /* Head */
 
 .head {
-	background: linear-gradient(to right, #fff 50%, rgba(0,0,0,.01) 50%), url("../img/header-bg.jpg");
+	background: #fff;
 	display: flex;
 	background-position: 200% 0, 400px 0;
+	background-size: cover, 80%;
+	background-repeat: no-repeat;
 	align-items: center;
 	color: #000;
 }
 
 /* Electro */
 .electro {
-	background-image: linear-gradient(to right, #fff 50%, rgba(0,0,0,.01) 50%), url('../img/nasa-bg.jpg');
+	background: #fff;
 	display: flex;
 	background-position: 200% 0, 200% 0;
+	background-size: cover,90%;
+	background-repeat: no-repeat;
 	align-items: center;
 	color: #000;
 	.pic-50 svg {
@@ -577,10 +587,11 @@ b, strong {
 
 /* tech */
 .truck {
-	background-image: linear-gradient(to right, #fff 50%, rgba(0,0,0,.01) 50%), url('../img/tech-bg.jpg');
+	background: #fff;
 	display: flex;
-	background-position: 0 0, 500px 0;
-	background-size: cover, cover;
+	background-position: 0 0, 600px 0;
+	background-size: cover, 80%;
+	background-repeat: no-repeat;
 	align-items: center;
 	color: #000;
 	.pic-50 svg {
@@ -588,29 +599,75 @@ b, strong {
 	}
 }
 
+/* about */
 .about {
-	background: linear-gradient(to right, rgba(0,0,0,.01) 50%, #fff 50%), url("../img/about-bg.jpg");
+	background: #fff;
 	display: flex;
-	background-position: 200% 0, 200% 0;
+	background-position: 0 0, 30vw 0;
+	background-size: 100%, 100%;
 	align-items: center;
 	color: #000;
 }
+
+.head--bg {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	top: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.electro--bg {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	top: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.truck--bg {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	top: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.about--bg {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	top: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+
 
 /* Slick */
 .slick-dots {
 	bottom: -40px;
 }
 
-.truck .slick-dots li button:before {
-	color: #000;
-	border: 1px solid #000;
-}
-
-.truck .slick-dots li.slick-active button:before {
-	color: #000;
-	background: #000;
-	opacity: 1;
-}
 
 .slick-dots li button:before {
 	color: #fff;
@@ -627,6 +684,17 @@ b, strong {
 .slick-dots li.slick-active button:before {
 	color: #fff;
 	background: #fff;
+	opacity: 1;
+}
+
+.slick-dots li button:before {
+	color: #000;
+	border: 1px solid #000;
+}
+
+.slick-dots li.slick-active button:before {
+	color: #000;
+	background: #000;
 	opacity: 1;
 }
 
